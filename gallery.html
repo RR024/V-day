@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Gallery</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        background-size: 400% 400%;
+        animation: gradientShift 8s ease infinite;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: 20px;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        border: 4px solid transparent;
+        background-image: linear-gradient(white, white), 
+                          linear-gradient(45deg, #ff6b6b, #fcb045, #4ecdc4, #556270);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    /* Existing styles remain the same... */
+
+    /* Wordings Below Gallery */
+    .caption-section {
+        margin-top: 30px;
+        text-align: center;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .caption-section h2 {
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        font-weight: bold;
+        color: #ffe4ec;
+        margin: 10px 0;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        background: linear-gradient(45deg, #ff6b6b, #fcb045, #4ecdc4);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientShift 4s ease infinite;
+    }
+
+    .caption-section h3 {
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
+        font-weight: normal;
+        color: #fff3e6;
+        margin: 8px 0;
+        font-style: italic;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+<body>
+    <h1>🎉 Birthday Memories 🎉</h1>
+    <div class="gallery">
+        <img src="photos/IMG-20250812-WA0001.jpg" alt="Memory 1">
+        <img src="photos/IMG-20250812-WA0002.jpg" alt="Memory 2">
+        <img src="photos/IMG-20250812-WA0003.jpg" alt="Memory 3">
+        <img src="photos/IMG-20250812-WA0008.jpg" alt="Memory 4">
+        <img src="photos/WhatsApp Image 2025-08-12 at 15.12.53_173b8cab.jpg" alt="Memory 5">
+        <img src="photos/WhatsApp Image 2025-08-12 at 15.12.54_6d79db11.jpg" alt="Memory 6">
+        <img src="photos/WhatsApp Image 2025-08-12 at 15.12.54_fbe6a7ec.jpg" alt="Memory 7">
+        <img src="photos/vv.jpg" alt="Memory 8">
+    </div>
+    <div class="caption-section">
+        <h2>Seri etho poranthu tholanjita polachu poo..!!😂</h2>
+        <h2>Once again Happy Birthday!!!</h2>
+        <h3>Most important thing and always remember that...</h3>
+        <h3>You are always shorter than me...😂🤣</h3>
+    </div>
+</body>
+</html>
